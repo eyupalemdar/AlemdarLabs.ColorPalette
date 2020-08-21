@@ -5,7 +5,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>AlemdarLabs.ColorPalette</RootNamespace>
     <Product>AlemdarLabs.ColorPalette.Shared</Product>
-    <PackageIcon>icon-1.png</PackageIcon>
+    <PackageIcon>colorpalette.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +15,10 @@
     <EmbeddedResource Remove="Quantizers\Octree\**" />
     <None Remove="Quantizers\KMeans\**" />
     <None Remove="Quantizers\Octree\**" />
+    <None Include="..\..\assets\colorpalette.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
