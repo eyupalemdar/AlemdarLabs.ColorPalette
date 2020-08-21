@@ -16,7 +16,7 @@ namespace AlemdarLabs.ColorPalette.Quantizers
         /// <value>
         ///   <c>true</c> if to allow parallel processing; otherwise, <c>false</c>.
         /// </value>
-        public bool AllowParallel { get; }
+        bool AllowParallel { get; }
 
         /// <summary>
         /// Get palette of the specified size.

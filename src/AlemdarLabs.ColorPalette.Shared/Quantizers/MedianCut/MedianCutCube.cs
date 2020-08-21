@@ -117,15 +117,24 @@ namespace AlemdarLabs.ColorPalette.Quantizers.MedianCut
         /// <param name="secondMedianCutCube">The second created cube.</param>
         public void SplitAtMedian(byte componentIndex, out MedianCutCube firstMedianCutCube, out MedianCutCube secondMedianCutCube)
         {
-            List<int> colors = componentIndex switch
+            List<int> colors = null;
+
+            switch (componentIndex)
             {
-                // red colors
-                0 => ColorList.OrderBy(argb => Color.FromArgb(argb).R).ToList(),
-                // green colors
-                1 => ColorList.OrderBy(argb => Color.FromArgb(argb).G).ToList(),
-                // blue colors
-                2 => ColorList.OrderBy(argb => Color.FromArgb(argb).B).ToList(),
-                _ => throw new NotSupportedException("Only three color components are supported (R, G and B)."),
+                case 0:
+                    // red colors
+                    ColorList.OrderBy(argb => Color.FromArgb(argb).R).ToList();
+                break;
+                case 1:
+                    // green colors
+                    ColorList.OrderBy(argb => Color.FromArgb(argb).G).ToList();
+                    break;
+                case 2:
+                    // blue colors
+                    ColorList.OrderBy(argb => Color.FromArgb(argb).B).ToList();
+                break;
+                default:
+                    throw new NotSupportedException("Only three color components are supported (R, G and B).");
             };
 
             // retrieves the median index (a half point)
