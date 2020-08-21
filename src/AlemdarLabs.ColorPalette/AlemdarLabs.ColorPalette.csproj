@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Eyüp Alemdar</Authors>
+    <Company>AlemdarLabs</Company>
+    <Product>AlemdarLabs.ColorPalette</Product>
+    <Description>Cross-platform color palette creator. Grab the color palette from an image using .Net Core.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright 2020-2021 Eyüp Alemdar</Copyright>
+    <PackageProjectUrl>https://github.com/eyupalemdar/AlemdarLabs.ColorPalette</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/eyupalemdar/AlemdarLabs.ColorPalette</RepositoryUrl>
+    <PackageTags>netcore, cross-platform, color quantization, palette, imaging, median cut</PackageTags>
+    <PackageReleaseNotes>https://github.com/eyupalemdar/AlemdarLabs.ColorPalette/releases</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AlemdarLabs.ColorPalette.Shared\AlemdarLabs.ColorPalette.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
