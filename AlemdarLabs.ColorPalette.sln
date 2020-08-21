@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPalette.Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPalette.Test", "test\AlemdarLabs.ColorPalette.Test\AlemdarLabs.ColorPalette.Test.csproj", "{18E9BCEB-E04C-4DAC-9A6C-24839480B6FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlemdarLabs.ColorPalette", "src\AlemdarLabs.ColorPalette\AlemdarLabs.ColorPalette.csproj", "{AEA768FF-F52D-43E1-B254-77554FCA4928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPalette", "src\AlemdarLabs.ColorPalette\AlemdarLabs.ColorPalette.csproj", "{AEA768FF-F52D-43E1-B254-77554FCA4928}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
