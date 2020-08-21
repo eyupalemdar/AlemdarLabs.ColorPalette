@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/eyupalemdar/AlemdarLabs.ColorPalette</RepositoryUrl>
     <PackageTags>netcore, cross-platform, color quantization, palette, imaging, median cut</PackageTags>
     <PackageReleaseNotes>https://github.com/eyupalemdar/AlemdarLabs.ColorPalette/releases</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,6 +21,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
