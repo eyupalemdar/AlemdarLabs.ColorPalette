@@ -1,0 +1,76 @@
+﻿.picturebox-section {
+    border-bottom: 2px solid var(--border-color-light);
+    padding: 2rem 0;
+}
+
+.image-selection {
+    margin-bottom: 80px;
+}
+
+.image-selection .image-area {
+    position: relative;
+    line-height: 1em;
+    min-height: 240px;
+    background-color: var(--hover-bg-color);
+    border-radius: var(--border-radius-xl);
+}
+
+.color-palette-output {
+    padding: 1.5rem;
+    background-color: white;
+    border: 1px solid var(--border-color-light);
+    border-top-width: 0;
+    border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+}
+
+.generate-palette-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8rem;
+    height: 8rem;
+    margin-top: -4rem;
+    margin-left: -4rem;
+    border: none;
+    border-radius: 50%;
+    color: var(--link-color);
+    background-color: white;
+    border: 4px solid var(--link-color);
+    font-size: 2rem;
+    font-weight: var(--bold);
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none !important;
+}
+
+    .generate-palette-btn:hover {
+        color: white;
+        background-color: var(--link-color);
+    }
+
+    .generate-palette-btn:active {
+        transform: scale(0.9);
+    }
+
+    .generate-palette-btn.hide-btn {
+        transition: transform 0.6s, top 0.6s cubic-bezier(0.22, -0.37, 0.75, 0.75);
+        top: 105%;
+        transform: scale(0);
+    }
+
+.image-selection .picturebox-image {
+    border-radius: var(--border-radius-xl);
+    transition: border-radius 0.2s 0.3s;
+}
+
+.picturebox-image {
+    display: block;
+    width: 100%;
+    border-radius: var(--border-radius-xl) var(--border-radius-xl) 0 0;
+    border-radius: var(--border-radius-xl);
+    transition: border-radius 0.2s 0.3s;
+}
+
+.output-layout {
+    display: flex;
+}

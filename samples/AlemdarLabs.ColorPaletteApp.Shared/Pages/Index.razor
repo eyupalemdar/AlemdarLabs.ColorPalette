@@ -1,9 +1,20 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
+<div class="container h-100 w-100">
+    <section class="picturebox-section">
+        <h2>Examples</h2>
+        <PictureBox FilePath="@($"{FilePath}/{exampleImageName}")"
+                    AssemblyPath="@($"{AssemblyPath}.{exampleImageName}")" />
+    </section>
+</div>
 
 @code {
+    const string FilePath = "_content/AlemdarLabs.ColorPaletteApp.Shared/images";
+    const string AssemblyPath = "AlemdarLabs.ColorPaletteApp.wwwroot.images";
+    string exampleImageName = "example-1.jpg";
 
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
 }

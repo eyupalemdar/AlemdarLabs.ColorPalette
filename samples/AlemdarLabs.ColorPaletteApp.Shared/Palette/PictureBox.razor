@@ -1,0 +1,68 @@
+﻿<div class="image-selection">
+    <div class="image-area">
+        <Button @onclick="@(async () => await GeneratePalette())"
+                class="generate-palette-btn @HideButtonClass">
+            <span>Click</span>
+        </Button>
+        <img src="@FilePath"
+             class="picturebox-image" />
+    </div>
+    @if (IsPaletteGenerated)
+    {
+        <div class="color-palette-output">
+            <div class="output-layout">
+                <div class="function get-color">
+                    <h3 class="function-title">Dominant Color</h3>
+                    <div class="swatches">
+                        <div class="swatch" style="background-color: rgb(124, 190, 192)"></div>
+                    </div>
+                </div>
+                <div class="function get-palette">
+                    <h3 class="function-title">Palette</h3>
+                    <div class="function-output">
+                        <div class="swatches">
+                            <div class="swatch" style="background-color: rgb(213, 193, 135)"></div>
+                            <div class="swatch" style="background-color: rgb(110, 205, 223)"></div>
+                            <div class="swatch" style="background-color: rgb(54, 38, 28)"></div>
+                            <div class="swatch" style="background-color: rgb(131, 122, 57)"></div>
+                            <div class="swatch" style="background-color: rgb(43, 125, 148)"></div>
+                            <div class="swatch" style="background-color: rgb(156, 176, 121)"></div>
+                            <div class="swatch" style="background-color: rgb(130, 121, 109)"></div>
+                            <div class="swatch" style="background-color: rgb(167, 198, 220)"></div>
+                            <div class="swatch" style="background-color: rgb(210, 75, 8)"></div>
+                            <div class="swatch" style="background-color: rgb(36, 68, 132)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+@code {
+    [Parameter] public string FilePath { get; set; }
+    [Parameter] public string AssemblyPath { get; set; }
+
+    private bool IsPaletteGenerated = false;
+    private string HideButtonClass = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+
+    async Task GeneratePalette()
+    {
+        var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+        string[] all = assembly.GetManifestResourceNames();
+
+        var resource = assembly.GetManifestResourceStream(AssemblyPath);
+        var image = new Bitmap(resource);
+        IColorQuantizer colorQuantizer = new MedianCutQuantizer(image);
+        var colorList = await colorQuantizer.QuantizeAsync(10);
+
+        IsPaletteGenerated = true;
+        HideButtonClass = "hide-btn";
+    }
+}

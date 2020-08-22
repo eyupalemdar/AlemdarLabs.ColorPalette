@@ -6,16 +6,23 @@
     <RootNamespace>AlemdarLabs.ColorPaletteApp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\images\example-1.jpg" />
+    <Content Remove="wwwroot\images\example-2.jpg" />
+    <Content Remove="wwwroot\images\example-3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\images\example-1.jpg" />
+    <EmbeddedResource Include="wwwroot\images\example-2.jpg" />
+    <EmbeddedResource Include="wwwroot\images\example-3.jpg" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="AlemdarLabs.ColorPalette" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.7" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>
