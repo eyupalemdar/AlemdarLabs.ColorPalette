@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPalette", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{CF81FE72-A52A-4407-B2B5-3EBA4F5BF284}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlemdarLabs.ColorPaletteApp", "samples\AlemdarLabs.ColorPaletteApp\AlemdarLabs.ColorPaletteApp.csproj", "{CECB631D-1672-4D8C-8627-7F9344C0DD88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPaletteApp", "samples\AlemdarLabs.ColorPaletteApp\AlemdarLabs.ColorPaletteApp.csproj", "{CECB631D-1672-4D8C-8627-7F9344C0DD88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlemdarLabs.ColorPaletteApp.Shared", "samples\AlemdarLabs.ColorPaletteApp.Shared\AlemdarLabs.ColorPaletteApp.Shared.csproj", "{A9DF8DB1-0A12-443B-903E-53A5C0AAC07A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPaletteApp.Shared", "samples\AlemdarLabs.ColorPaletteApp.Shared\AlemdarLabs.ColorPaletteApp.Shared.csproj", "{A9DF8DB1-0A12-443B-903E-53A5C0AAC07A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

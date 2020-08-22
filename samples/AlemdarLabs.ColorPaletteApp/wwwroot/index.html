@@ -1,17 +1,41 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class="h-100 w-100 fd-scrollbar">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>AlemdarLabs.ColorPaletteApp</title>
+    <title>Color Palette</title>
     <base href="/" />
     <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+
+    <!--Css Libraries-->
+    <link href="_content/AlemdarLabs.ColorPaletteApp.Shared/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--Custom css files-->
+    <link href="_content/AlemdarLabs.ColorPaletteApp.Shared/css/app.css" rel="stylesheet" />
+    <link href="_content/AlemdarLabs.ColorPaletteApp.Shared/css/loading-screen.css" rel="stylesheet" />
+    <link href="_content/AlemdarLabs.ColorPaletteApp.Shared/css/scrollbar.css" rel="stylesheet" />
 </head>
 
-<body>
-    <app>Loading...</app>
+<body class="container-fluid h-100 w-100">
+    <app>
+        <!--Loading Screen - Begin-->
+        <div id="applicationLoadingPanel" class="loading-items-center loading-font" style="height: 100vh;">
+            <div class="loading-items-center" style="flex-direction: column">
+                <div class="loading position-relative loading-items-center" style="position: relative">
+                    <div class="loading-border fd-border-secondary" style="position: absolute; border-color: #d9d9d9; height: 100%; width: 100%; border-radius: 50%"></div>
+                    <div class="loading-floated-circle loading-border fd-border-primary loading-border-primary" style="position: absolute; height: 100%; width: 100%; border-radius: 50%; border-left-color: transparent !important; border-right-color: transparent !important; border-bottom-color: transparent !important"></div>
+                    <div id="loadingBackground" class="loading-image-wrapper text-white fd-bg-primary loading-items-center circle-bg" style="color: #fff; border-radius: 50%">
+                        <img class="loading-image" src="_content/AlemdarLabs.ColorPaletteApp.Shared/images/SplashScreen.svg" onload="document.getElementById('loadingBackground').classList.add('circle-bg')">
+                    </div>
+                </div>
+                <div class="loading-caption mt-4">COLOR PALETTE</div>
+                <div class="loading-sm-text text-muted mt-2" style="color: #a1a1a1">Loading...</div>
+            </div>
+        </div>
+        <!--Loading Screen - End-->
+    </app>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
@@ -20,6 +44,13 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+
+    <!--JS Libraries-->
+
+
+    <!--Cutom JS Libraries-->
+
+
 </body>
 
 </html>
