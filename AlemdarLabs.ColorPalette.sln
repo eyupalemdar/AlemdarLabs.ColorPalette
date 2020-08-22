@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPalette.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlemdarLabs.ColorPalette", "src\AlemdarLabs.ColorPalette\AlemdarLabs.ColorPalette.csproj", "{AEA768FF-F52D-43E1-B254-77554FCA4928}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{CF81FE72-A52A-4407-B2B5-3EBA4F5BF284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlemdarLabs.ColorPaletteApp", "samples\AlemdarLabs.ColorPaletteApp\AlemdarLabs.ColorPaletteApp.csproj", "{CECB631D-1672-4D8C-8627-7F9344C0DD88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{AEA768FF-F52D-43E1-B254-77554FCA4928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA768FF-F52D-43E1-B254-77554FCA4928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA768FF-F52D-43E1-B254-77554FCA4928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CECB631D-1672-4D8C-8627-7F9344C0DD88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CECB631D-1672-4D8C-8627-7F9344C0DD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CECB631D-1672-4D8C-8627-7F9344C0DD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CECB631D-1672-4D8C-8627-7F9344C0DD88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +47,7 @@ Global
 		{0F261593-763A-4E4F-AE47-15E215458FBF} = {476212BA-DC6F-4A9F-9D23-C61B9DF74420}
 		{18E9BCEB-E04C-4DAC-9A6C-24839480B6FA} = {9FAD7260-EFF2-4795-9136-A33480A2D043}
 		{AEA768FF-F52D-43E1-B254-77554FCA4928} = {476212BA-DC6F-4A9F-9D23-C61B9DF74420}
+		{CECB631D-1672-4D8C-8627-7F9344C0DD88} = {CF81FE72-A52A-4407-B2B5-3EBA4F5BF284}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D3DD41A-F259-4B29-A3AF-35BE4E900254}
